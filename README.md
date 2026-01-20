@@ -2,7 +2,7 @@
 Project of System Limited using react
 
 
-______npm create vite@latest my-react-app -- --template react ________
+-----> npm create vite@latest my-react-app -- --template react ----->
 ______cd my-react-app ________
 ______npm install _______
 ______npm run dev ______
