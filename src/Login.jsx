@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
 
@@ -8,6 +8,17 @@ const Login = () => {
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
     const navigate = useNavigate()
+
+    // Navigate after successful login
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => {
+                navigate('/landing')
+            }, 1000)
+
+            return () => clearTimeout(timer)
+        }
+    }, [success, navigate])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -25,7 +36,6 @@ const Login = () => {
             setSuccess('Login successful! 🎉')
             setEmail('')
             setPassword('')
-            // navigate('/dashboard')
         } else {
             setError('Incorrect email or password')
         }
@@ -49,7 +59,7 @@ const Login = () => {
                     <input
                         type="email"
                         value={email}
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                         required
                     />
                 </div>
@@ -59,7 +69,7 @@ const Login = () => {
                     <input
                         type="password"
                         value={password}
-                        onChange={e => setPassword(e.target.value)}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                     />
                 </div>

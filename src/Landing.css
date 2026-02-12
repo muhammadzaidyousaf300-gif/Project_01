@@ -1,0 +1,77 @@
+/* General page styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  color: #333;
+}
+
+.landing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.landing-header {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.landing-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.landing-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Items grid */
+.landing-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+/* Item cards */
+.landing-item-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.landing-item-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2575fc;
+}
+
+.landing-item-card p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Hover effect */
+.landing-item-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.landing-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
