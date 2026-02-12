@@ -32,6 +32,6 @@ Variant → JavaScript or TypeScript
 
 ## Then:
 
-cd my-react-app
-npm install
+cd my-react-app --->    
+npm install--->
 npm run dev
