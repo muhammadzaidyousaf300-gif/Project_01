@@ -1,35 +1,90 @@
 import React from "react";
-import "./Landing.css";
+import "./landing.css";
 
-const items = [
-  { id: 1, title: "Item 1", description: "Details about item 1" },
-  { id: 2, title: "Item 2", description: "Details about item 2" },
-  { id: 3, title: "Item 3", description: "Details about item 3" },
-  { id: 4, title: "Item 4", description: "Details about item 4" },
-];
-
-const LandingPage = () => {
+const Landing = () => {
   return (
-    <div className="landing-container">
-      <header className="landing-header">
-        <h1>Welcome to Our Landing Page</h1>
-        <p>Explore our amazing items below</p>
+    <div>
+
+      {/* ---------------- HEADER ---------------- */}
+      <header className="header">
+        <div className="logo">
+          <img src="https://sl.bing.net/gKuAaspGhjg" alt="Logo" />
+          <h2 style={{ color: "#ffffff" }}>Website</h2>
+        </div>
+
+        <nav className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#service">Service</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact Us</a>
+        </nav>
+
+        <div className="nav-menu-icon">
+          <i className="fa fa-bars"></i>
+        </div>
       </header>
 
-      <section className="landing-items">
-        {items.map((item) => (
-          <div key={item.id} className="landing-item-card">
-            <h2>{item.title}</h2>
-            <p>{item.description}</p>
-          </div>
-        ))}
+      {/* ---------------- HERO SECTION ---------------- */}
+      <section className="hero">
+        <div className="hero-left">
+          <h1>
+            Best <span>Landing Page </span>
+          </h1>
+
+          <p>
+            Not all landing page design companies out there have the expertise
+            or experience needed to drive conversion and growth. Check out our
+            carefully selected top design agencies and make an informed choice today!
+          </p>
+
+          <button className="btn-main">Learn More</button>
+        </div>
+
+        <div className="hero-right">
+          <img src="/illustration.png" alt="Illustration" />
+        </div>
       </section>
 
-      <footer className="landing-footer">
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
+      {/* Background Curve */}
+      <div className="hero-bg">
+        <div className="hero-gradient"></div>
+      </div>
+
+      {/* ---------------- FOOTER ---------------- */}
+      <footer className="footer">
+        <div className="footer-container">
+
+          <div className="footer-col">
+            <h3>etweb</h3>
+            <p>
+              We build high-converting landing pages that help businesses grow
+              faster and smarter in the digital world.
+            </p>
+          </div>
+
+          <div className="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#service">Service</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div className="footer-col">
+            <h4>Contact</h4>
+            <p>Email: support@etweb.com</p>
+            <p>Phone: +92 300 0000000</p>
+          </div>
+
+        </div>
+
+        <div className="footer-bottom">
+          © {new Date().getFullYear()} etweb. All rights reserved.
+        </div>
       </footer>
+
     </div>
   );
 };
 
-export default LandingPage;
+export default Landing;
